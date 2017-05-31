@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+		
+    
+    <!-- Appender console -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">		
+			<pattern>%d{yyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger [%line] - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+ 
+    <logger name="org.springframework"  level="INFO" />
+    <logger name="com.capgemini"        level="DEBUG" />
+
+     
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+    </root>
+ 
+</configuration>
